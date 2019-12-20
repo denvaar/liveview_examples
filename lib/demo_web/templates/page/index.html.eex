@@ -1,0 +1,68 @@
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2">Phoenix LiveView Examples</h2>
+    <h5 class="title is-5">Highly interactive web apps with Elixir and Phoenix Web Framework</h5>
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-danger">
+          <div class="content">
+            <p class="title">Slide Show</p>
+          </div>
+        </article>
+      </div>
+      <div class="tile is-vertical is-8">
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-success">
+            <p class="title">Trash Game</p>
+          </article>
+        </div>
+        <div class="tile">
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-warning">
+              <p class="title">Spell Checker</p>
+            </article>
+          </div>
+          <div class="tile is-parent is-vertical">
+            <article class="tile is-child notification is-primary">
+              <p class="title">Typing Test</p>
+            </article>
+            <article class="tile is-child notification is-info">
+              <p class="title">Kanban Board</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-8">
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+            <article class="tile is-child notification is-primary">
+              <p class="title">Paginated Data</p>
+            </article>
+            <article class="tile is-child notification is-warning">
+              <p class="title">Form Validation</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-info">
+              <p class="title">Simple Counter</p>
+            </article>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-danger">
+            <p class="title">Tennis Scorekeeping</p>
+          </article>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-success">
+          <div class="content">
+            <p class="title">Chat Room</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

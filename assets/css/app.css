@@ -1,0 +1,8 @@
+/* This file is for your main application css. */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+@import '../../deps/phoenix_live_view/assets/css/live_view.css';
+@import './bulma.css';
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+}

@@ -19,11 +19,10 @@ defmodule DemoWeb.Router do
 
     get "/", PageController, :index
 
-    live "/counter", CounterLive
-  end
+    live "/counter", CounterLive, as: :counter
 
-  # Other scopes may use custom stacks.
-  # scope "/api", DemoWeb do
-  #   pipe_through :api
-  # end
+    live "/form-validation", FormValidationLive, as: :form_validation
+    post "/process_form", FormValidationController, :post, as: :process_form
+    get "/form-validation-thanks", FormValidationController, :index, as: :form_validation_thanks
+  end
 end

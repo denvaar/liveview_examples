@@ -1,0 +1,14 @@
+<div class="field">
+  <label class="label">
+    <%= @label %>
+  </label>
+  <div class="control">
+    <input
+      name="<%= @name %>"
+      phx-debounce="700"
+      class="input <%= @css_classes %>"
+      type="<%= @input_type %>"
+      placeholder="<%= @placeholder %>"
+      value="<%= @value %>">
+  </div>
+</div>

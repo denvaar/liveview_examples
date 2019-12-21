@@ -1,0 +1,47 @@
+<%= form_for DemoWeb.Endpoint, Routes.process_form_path(DemoWeb.Endpoint, :post), [phx_change: "input-change", phx_submit: "submit"], fn _f -> %>
+  <%= render("input_field.html",
+    label: "First & last name",
+    name: "name",
+    css_classes: css_for(:name, @name),
+    placeholder: "James Bond",
+    value: @name,
+    input_type: "text") %>
+
+  <%= render("input_field.html",
+    label: "Email",
+    name: "email",
+    css_classes: css_for(:email, @email),
+    placeholder: "mr_mutant_john@hotmail.com",
+    value: @email,
+    input_type: "email") %>
+
+  <%= render("input_field.html",
+    label: "Date",
+    name: "date",
+    css_classes: css_for(:date, @date),
+    placeholder: "dd/mm/yyyy",
+    value: @date,
+    input_type: "text") %>
+
+  <hr/>
+
+  <div class="columns">
+    <div class="column">
+      <%= if error_message(@name, @email, @date) != "" do %>
+        <p class="help is-danger">
+          <%= error_message(@name, @email, @date) %>
+        </p>
+      <% end %>
+      <%= if success_message(@name, @email, @date) != "" do %>
+        <p class="help is-success">
+          <%= success_message(@name, @email, @date) %>
+        </p>
+      <% end %>
+    </div>
+    <div class="column has-text-centered">
+      <div class="field">
+      <button <%= if !form_is_valid?(@name, @email, @date) && @js_enabled, do: "disabled" %> class="button is-success is-rounded">Do a thing</button>
+      </div>
+    </div>
+  </div>
+<%end %>

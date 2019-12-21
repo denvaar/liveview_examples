@@ -41,12 +41,16 @@
               <p class="title">Paginated Data</p>
             </article>
             <article class="tile is-child notification is-warning">
-              <p class="title">Form Validation</p>
+              <%= link to: Routes.form_validation_path(DemoWeb.Endpoint, DemoWeb.FormValidationLive) do %>
+                <p class="title">Form Validation</p>
+              <% end %>
             </article>
           </div>
           <div class="tile is-parent">
             <article class="tile is-child notification is-info">
-              <p class="title">Simple Counter</p>
+              <%= link to: Routes.counter_path(DemoWeb.Endpoint, DemoWeb.CounterLive) do %>
+                <p class="title">Simple Counter</p>
+              <% end %>
             </article>
           </div>
         </div>

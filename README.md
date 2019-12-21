@@ -1,9 +1,9 @@
 # Phoenix LiveView Examples
 
-These are a few examples that showcase what's possible using the realtime features of the Phoenix web framework, as well as Phoenix LiveView.
+These are a few examples that showcase what's possible using the realtime features of the Phoenix web framework, including Phoenix LiveView.
 
 - ✅ Simple Counter
-- 🔜 Form Validation
+- ✅ Form Validation
 - 🔜 Paginated Data
 - 🔜 Kanban Board
 - 🔜 Trash Game
@@ -11,3 +11,4 @@ These are a few examples that showcase what's possible using the realtime featur
 - 🔜 Typing Test
 - 🔜 Slide Show
 - 🔜 Chat Room
+- 🔜 Spell Checker

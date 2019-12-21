@@ -6,3 +6,22 @@
 body {
   font-family: 'Fira Sans', sans-serif;
 }
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.meter {
+  height: 20px;
+  background: #ddd;
+  border-radius: 25px;
+}
+
+.meter > span {
+  display: block;
+  height: 20px;
+  border-radius: 20px;
+  background-color: mediumseagreen;
+  overflow: hidden;
+  transition: width 0.25s;
+}

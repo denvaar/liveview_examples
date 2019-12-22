@@ -24,5 +24,8 @@ defmodule DemoWeb.Router do
     live "/form-validation", FormValidationLive, as: :form_validation
     post "/process_form", FormValidationController, :post, as: :process_form
     get "/form-validation-thanks", FormValidationController, :index, as: :form_validation_thanks
+
+    get "/typing-test", RedirectToTypingTest, as: :typing_test
+    live "/typing-test/:token", TypingTestLive
   end
 end

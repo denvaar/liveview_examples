@@ -1,0 +1,65 @@
+<div class="columns is-vcentered mt-20">
+  <div class="column has-text-centered">
+    <h3 class="title is-3">Typing Test Example</h3>
+  </div>
+  <div class="column has-text-centered">
+    <div class="content is-medium stats">
+      <span>
+        WPM <%= @wpm %>
+      </span>
+      <span>
+        Elapsed time <%= mins(@elapsed_time) %>:<%= sec(@elapsed_time) %>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="typing-area" oncopy="return false" oncut="return false">
+  <%= if @status == "waiting" do %>
+    <button class="button is-primary typing-test-button" phx-click="start">Begin</button>
+    <div class="blur-overlay">
+      <%= Phoenix.HTML.raw @prompt %>
+    </div>
+    <% else %>
+      <%= Phoenix.HTML.raw @prompt %>
+    <% end %>
+</div>
+
+<section class="section" style="padding-top: 10px">
+  <div class="container">
+    <div class="typing-input has-text-centered">
+      <form method="post" phx-change="update-input" phx-submit="enter">
+        <input
+          value="<%= @input %>"
+          type="text"
+          name="user_input"
+          placeholder="Type the words from the prompt here"
+          autocomplete="off"
+          onpaste="return false"
+          <%= if @status == "waiting" do %>disabled<% end %>
+        />
+      </form>
+    </div>
+
+    <div class="content is-small mt-20">
+      <%= if Enum.count(@history) > 0 do %>
+        <table class="table is-striped">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>WPM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= for %{id: id, wpm: wpm} <- @history do %>
+              <tr>
+                <td><%= if id == @token, do: "You", else: "Competitor" %></td>
+                <td><%= wpm %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% end %>
+    </div>
+  </div>
+</section>

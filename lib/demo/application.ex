@@ -9,9 +9,9 @@ defmodule Demo.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      DemoWeb.Endpoint
+      DemoWeb.Endpoint,
       # Starts a worker by calling: Demo.Worker.start_link(arg)
-      # {Demo.Worker, arg},
+      {Demo.TypingTest.History, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

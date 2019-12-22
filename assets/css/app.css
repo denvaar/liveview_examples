@@ -24,3 +24,93 @@ body {
   overflow: hidden;
   transition: width 0.25s;
 }
+
+.header {
+  margin-top: 5rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.header > h2 {
+  color: #5e81ac;
+}
+
+.stats > span {
+  color: #2e3440;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid;
+  margin-left: 10px;
+  margin-bottom: 0;
+  border-radius: 3px;
+}
+
+.complete {
+  background: #a3be8c;
+  color: #2e3440;
+}
+
+.error {
+  background: #bf616a;
+  color: #2e3440;
+}
+
+.typing-area {
+  position: relative;
+  font-size: 2rem;
+  padding: 4rem;
+  background: #434c5e;
+  color: #eceff4;
+  max-height: 450px;
+  overflow-y: scroll;
+}
+
+.typing-area > .typing-test-button {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: calc(50% - 25px);
+}
+
+.typing-area > span {
+  padding: 4px;
+  padding-right: 1px;
+  color: #fff;
+}
+
+.typing-area > span:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.typing-area > span:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.typing-input {
+  margin-top: 1rem;
+}
+
+.typing-input > form > input[type='text'] {
+  background: #fff;
+  color: #4c566a;
+  border: 2px solid #d8dee9;
+  border-radius: 3px;
+  padding: 1rem;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.typing-input > form > input[type='text']:focus {
+  border: 2px solid #5e81ac;
+}
+
+.blur-overlay {
+  filter: blur(12px);
+  -o-filter: blur(12px);
+  -ms-filter: blur(12px);
+  -moz-filter: blur(12px);
+  -webkit-filter: blur(12px);
+}

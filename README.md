@@ -8,7 +8,7 @@ These are a few examples that showcase what's possible using the realtime featur
 - 🔜 Kanban Board
 - 🔜 Trash Game
 - 🔜 Tennis Scorekeeping
-- 🔜 Typing Test
+- ✅ Typing Test
 - 🔜 Slide Show
 - 🔜 Chat Room
 - 🔜 Spell Checker

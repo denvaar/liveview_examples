@@ -43,7 +43,7 @@ defmodule DemoWeb.TypingTestLive do
   def handle_event("enter", %{"user_input" => input}, socket) do
     new_input = input <> "⏎"
 
-    if String.length(new_input) == String.length(prompt_text()) do
+    if String.length(new_input) + 1 == String.length(prompt_text()) do
       Process.cancel_timer(socket.assigns.timer_ref)
       Stats.reset(socket.assigns.token)
       History.log(socket.assigns.token, socket.assigns.wpm)
@@ -117,8 +117,6 @@ defmodule DemoWeb.TypingTestLive do
   end
 
   defp prompt_text() do
-    """
-    In the early 1970s, David McNeill, a psychology professor at the University of Chicago, was giving a talk in a Paris lecture hall when something odd caught his eye.⏎
-    """
+    "In the early 1970s, David McNeill, a psychology professor at the University of Chicago, was giving a talk in a Paris lecture hall when something odd caught his eye.⏎ "
   end
 end

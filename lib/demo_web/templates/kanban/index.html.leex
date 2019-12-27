@@ -1,0 +1,33 @@
+<div class="kanban">
+  <button class="button k-create-btn is-link is-outlined is-rounded" phx-click="create-task">
+    + New Task
+  </button>
+
+  <%= render(
+    "column.html",
+    edit_id: @edit_id,
+    tasks: @tasks,
+    column_value: 0,
+    column_label: "Backlog") %>
+
+  <%= render(
+    "column.html",
+    edit_id: @edit_id,
+    tasks: @tasks,
+    column_value: 1,
+    column_label: "Active Sprint") %>
+
+  <%= render(
+    "column.html",
+    edit_id: @edit_id,
+    tasks: @tasks,
+    column_value: 2,
+    column_label: "In Progress") %>
+
+  <%= render(
+    "column.html",
+    edit_id: @edit_id,
+    tasks: @tasks,
+    column_value: 3,
+    column_label: "Done") %>
+</div>

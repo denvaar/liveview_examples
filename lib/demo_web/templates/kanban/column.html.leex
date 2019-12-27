@@ -1,0 +1,27 @@
+<div class="k-col" phx-hook="KanbanColumn" phx-value-status="<%= @column_value %>">
+  <div class="col-label">
+    <%= @column_label %>
+  </div>
+  <div class="inner">
+    <%= for task <- tasks_with_status(@tasks, @column_value) do %>
+      <div class="k-card" draggable="<%= task.title != "" && @edit_id != task.id %>" phx-hook="KanbanCard" phx-value-id="<%= task.id %>">
+        <%= if task.title == "" || @edit_id == task.id do %>
+          <form phx-submit="add-title">
+            <input type="text" class="kanban-input" name="title" value="<%= task.title %>">
+            <input type="hidden" name="t_id" value="<%= task.id %>">
+          </form>
+        <% else %>
+          <%= task.title %>
+        <% end %>
+        <div class="actions">
+          <button phx-click="edit-task" phx-value-id="<%= task.id %>" class="button is-xsmall is-rounded is-outlined is-primary">
+            Edit
+          </button>
+          <button phx-click="delete-task" phx-value-id="<%= task.id %>" class="button is-xsmall is-rounded is-outlined is-danger">
+            Delete
+          </button>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

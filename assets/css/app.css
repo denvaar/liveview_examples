@@ -114,3 +114,69 @@ body {
   -moz-filter: blur(12px);
   -webkit-filter: blur(12px);
 }
+
+.kanban {
+  color: #fff;
+  background: #1b1d20;
+  min-height: 100vh;
+  overflow-x: scroll;
+  white-space: nowrap;
+  border-radius: 2px;
+  padding: 10px;
+  padding: 10px;
+}
+
+.k-col {
+  border-radius: 3px;
+  text-align: center;
+  display: inline-table;
+  min-width: 250px;
+  max-width: 250px;
+  height: 100vh;
+  background: #242b35;
+  margin: 5px;
+  white-space: normal;
+}
+
+.col-label {
+  padding: 20px;
+  border-bottom: 1px solid;
+  margin: 10px;
+}
+
+.inner {
+  height: 100%;
+}
+
+.k-card {
+  text-align: left;
+  color: #c4e6ff;
+  min-height: 50px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 2px;
+  background: #2f4252;
+}
+
+.k-card > .actions {
+  margin-top: 20px;
+}
+
+.k-create-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.is-xsmall {
+  font-size: 0.4rem;
+}
+
+.kanban-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid turquoise;
+  color: #c4e6ff;
+  font-size: 1em;
+  width: 100%;
+}

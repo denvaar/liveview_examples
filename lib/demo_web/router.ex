@@ -27,5 +27,7 @@ defmodule DemoWeb.Router do
 
     get "/typing-test", RedirectToTypingTest, as: :typing_test
     live "/typing-test/:token", TypingTestLive
+
+    live "/kanban", KanbanLive, as: :kanban
   end
 end

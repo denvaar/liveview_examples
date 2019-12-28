@@ -5,10 +5,7 @@ These are a few examples that showcase what's possible using the realtime featur
 - ✅ Simple Counter
 - ✅ Form Validation
 - 🔜 Paginated Data
-- 🔜 Kanban Board
-- 🔜 Trash Game
+- ✅ Kanban Board
 - 🔜 Tennis Scorekeeping
 - ✅ Typing Test
-- 🔜 Slide Show
-- 🔜 Chat Room
 - 🔜 Spell Checker

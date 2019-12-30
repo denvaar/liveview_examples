@@ -1,0 +1,107 @@
+<section class="hero is-success is-fullheight is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half">
+          <div class="container content is-medium">
+            <div class="box">
+              <div class="content">
+                <h5>Live Matches</h5>
+                <%= if length(@all_matches) == 0 do %>
+                  <p class="content is-small">
+                    <i>
+                      No matches yet... Go <%= link "here", to: Routes.tennis_control_path(DemoWeb.Endpoint, DemoWeb.TennisControlLive), target: "_blank" %> to create some!
+                    </i>
+                  </p>
+                <% end %>
+                <%= for match <- @all_matches do %>
+                  <p>
+                    <%= match.player_1.name %> v <%= match.player_2.name %>
+                    <%= if !is_subscribed?(@match_subscriptions, match.id) do %>
+                      <button
+                        phx-click="subscribe-match"
+                        phx-value-match_id="<%= match.id %>"
+                        class="button is-info is-small is-pulled-right">
+                        Subscribe
+                      </button>
+                    <% else %>
+                      <button
+                        phx-click="unsubscribe-match"
+                        phx-value-match_id="<%= match.id %>"
+                        class="button is-danger is-small is-pulled-right">
+                        Unsubscribe
+                      </button>
+                    <% end %>
+                  </p>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <%= if length(@match_subscriptions) == 0 do %>
+            <p class="content is-small has-text-centered">
+              <i>
+                You are not subscribed to any matches.
+              </i>
+            </p>
+          <% end %>
+          <%= for match <- @match_subscriptions do %>
+            <div class="box">
+              <div class="content">
+                <table class="table is-bordered is-striped is-fullwidth">
+                  <tbody>
+                   <tr>
+                     <td>
+                       <strong>
+                         <%= match.player_1.name %>
+                         <%= if match.serving == :player_1 do %>
+                           *
+                         <% end %>
+                       </strong>
+                     </td>
+                     <td class="has-text-centered">
+                       <%= Enum.at(match.player_1.sets, 0) || "-" %>
+                     </td>
+                     <td class="has-text-centered">
+                       <%= Enum.at(match.player_1.sets, 1) || "-" %>
+                     </td>
+                     <td class="has-text-centered">
+                       <%= Enum.at(match.player_1.sets, 2) || "-" %>
+                     </td>
+                     <td class="has-text-centered">
+                       <%= match.player_1.score %>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>
+                       <strong>
+                         <%= match.player_2.name %>
+                         <%= if match.serving == :player_2 do %>
+                           *
+                         <% end %>
+                       </strong>
+                     </td>
+                     <td class="has-text-centered">
+                       <%= Enum.at(match.player_2.sets, 0) || "-" %>
+                     </td>
+                     <td class="has-text-centered">
+                       <%= Enum.at(match.player_2.sets, 1) || "-" %>
+                     </td>
+                     <td class="has-text-centered">
+                       <%= Enum.at(match.player_2.sets, 2) || "-" %>
+                     </td>
+                     <td class="has-text-centered">
+                       <%= match.player_2.score %>
+                     </td>
+                   </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

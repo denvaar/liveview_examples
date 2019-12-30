@@ -11,7 +11,8 @@ defmodule Demo.Application do
       # Start the endpoint when the application starts
       DemoWeb.Endpoint,
       # Starts a worker by calling: Demo.Worker.start_link(arg)
-      {Demo.TypingTest.History, []}
+      {Demo.TypingTest.History, []},
+      {Demo.Tennis.Matches, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

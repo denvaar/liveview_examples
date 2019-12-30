@@ -29,5 +29,8 @@ defmodule DemoWeb.Router do
     live "/typing-test/:token", TypingTestLive
 
     live "/kanban", KanbanLive, as: :kanban
+
+    live "/tennis/watch", TennisLive, as: :watch_tennis
+    live "/tennis/control", TennisControlLive, as: :tennis_control
   end
 end

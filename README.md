@@ -6,6 +6,6 @@ These are a few examples that showcase what's possible using the realtime featur
 - ✅ Form Validation
 - 🔜 Paginated Data
 - ✅ Kanban Board
-- 🔜 Tennis Scorekeeping
+- ✅ Tennis Scorekeeping
 - ✅ Typing Test
 - 🔜 Spell Checker

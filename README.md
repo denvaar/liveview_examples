@@ -6,9 +6,8 @@ Run `mix phx.server` to view the examples listed below.
 
 ### Simple Counter
 
-This is a simple UI that allows the user to increase or decrease a number. A progress bar is shown to represent the value of the counter, and the transitions are animated using CSS.
+This is a simple UI that allows the user to increase or decrease a number. A progress bar is shown to represent the value of the counter, and the transitions are animated using CSS. [Read about how this works](docs/counter.md).
 
-[How's this work?](docs/counter.md)
 
 ### Form Validation
 

@@ -32,5 +32,7 @@ defmodule DemoWeb.Router do
 
     live "/tennis/watch", TennisLive, as: :watch_tennis
     live "/tennis/control", TennisControlLive, as: :tennis_control
+
+    live "/colors", ColorsLive, as: :colors
   end
 end

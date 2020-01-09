@@ -1,0 +1,24 @@
+<div class="card mt-20">
+  <div class="card-content">
+    <h5 class="title is-5">
+      <%= @title %>
+    </h5>
+    <p>
+      <%= @desc %>
+    </p>
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+        <%= link to: @demo_route do %>
+          View Demo
+        <% end %>
+      </span>
+    </p>
+    <p class="card-footer-item">
+      <span>
+        Read Docs
+      </span>
+    </p>
+  </footer>
+</div>

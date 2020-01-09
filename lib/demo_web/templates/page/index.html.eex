@@ -2,71 +2,48 @@
   <div class="container">
     <h2 class="title is-2">Phoenix LiveView Examples</h2>
     <h5 class="title is-5">Highly interactive web apps with Elixir and Phoenix Web Framework</h5>
-    <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-danger">
-          <div class="content">
-            <p class="title">Slide Show</p>
-          </div>
-        </article>
+
+    <div class="columns">
+      <div class="column is-one-third">
+
+        <%= render "card.html",
+          title: "Simple Counter",
+          desc: "Probably the most simple example. This is just a UI that allows the user to increase or decrease a number. A progress bar is shown to represent the value of the counter, and the transitions are animated using CSS.",
+          demo_route: Routes.counter_path(DemoWeb.Endpoint, DemoWeb.CounterLive) %>
+
+        <%= render "card.html",
+          title: "Typing Test",
+          desc: "Calculate your WPM and see results from yourself and others in real time.",
+          demo_route: Routes.redirect_to_typing_test_path(DemoWeb.Endpoint, [as: :typing_test]) %>
+
       </div>
-      <div class="tile is-vertical is-8">
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-success">
-            <p class="title">Trash Game</p>
-          </article>
-        </div>
-        <div class="tile">
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-warning">
-              <p class="title">Spell Checker</p>
-            </article>
-          </div>
-          <div class="tile is-parent is-vertical">
-            <article class="tile is-child notification is-primary">
-              <p class="title">Typing Test</p>
-            </article>
-            <article class="tile is-child notification is-info">
-              <p class="title">Kanban Board</p>
-            </article>
-          </div>
-        </div>
+      <div class="column is-one-third">
+
+        <%= render "card.html",
+          title: "Form Validation",
+          desc: "A form for users to input some information. The form fields are validated in real time. If Javascript is disabled, the app is still able to function, and falls back to validation upon form submission.",
+          demo_route: Routes.form_validation_path(DemoWeb.Endpoint, DemoWeb.FormValidationLive) %>
+
+        <%= render "card.html",
+          title: "Tennis Scorekeeping",
+          desc: "Offers an interface to administer tennis matches (create matches, give points to players, etc.) Other users can \"subscribe\" to one or more tennis matches and receive updates to the game in real time.",
+          demo_route: Routes.watch_tennis_path(DemoWeb.Endpoint, DemoWeb.TennisLive) %>
+
       </div>
-    </div>
-    <div class="tile is-ancestor">
-      <div class="tile is-vertical is-8">
-        <div class="tile">
-          <div class="tile is-parent is-vertical">
-            <article class="tile is-child notification is-primary">
-              <p class="title">Paginated Data</p>
-            </article>
-            <article class="tile is-child notification is-warning">
-              <%= link to: Routes.form_validation_path(DemoWeb.Endpoint, DemoWeb.FormValidationLive) do %>
-                <p class="title">Form Validation</p>
-              <% end %>
-            </article>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-info">
-              <%= link to: Routes.counter_path(DemoWeb.Endpoint, DemoWeb.CounterLive) do %>
-                <p class="title">Simple Counter</p>
-              <% end %>
-            </article>
-          </div>
-        </div>
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-danger">
-            <p class="title">Tennis Scorekeeping</p>
-          </article>
-        </div>
-      </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-success">
-          <div class="content">
-            <p class="title">Chat Room</p>
-          </div>
-        </article>
+      <div class="column is-one-third">
+
+        <%= render "card.html",
+          title: "Kanban Task Board",
+          desc: "Allows users to move cards around on the page, similar to Asana or Trello. This example demonstrates LiveView's interoperability with Javascript via hooks.",
+          demo_route: Routes.kanban_path(DemoWeb.Endpoint, DemoWeb.KanbanLive) %>
+
+        <%= render "card.html",
+          title: "Color Sorting Animation",
+          desc: "This is actually more of an example of what LiveView is not well suited for, but still it's suprising how well it works.",
+          demo_route: Routes.colors_path(DemoWeb.Endpoint, DemoWeb.ColorsLive) %>
+
       </div>
     </div>
+
   </div>
 </section>

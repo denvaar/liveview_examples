@@ -11,6 +11,7 @@ Hooks.KanbanCard = {
     cards.forEach(card => {
       card.addEventListener('dragstart', e => {
         e.dataTransfer.setData('t_id', e.target.getAttribute('phx-value-id'));
+        e.dataTransfer.setData('status', e.target.parentElement.parentElement.getAttribute('phx-value-status'));
       });
     });
   },
@@ -24,7 +25,7 @@ Hooks.KanbanColumn = {
 
     this.el.addEventListener('drop', e => {
       const taskId = e.dataTransfer.getData('t_id');
-      const taskStatus = e.srcElement.getAttribute('phx-value-status');
+      const taskStatus = e.dataTransfer.getData('status');
 
       if (taskId && taskStatus) {
         this.pushEvent('drop', {t_id: taskId, status: taskStatus});

@@ -1,6 +1,6 @@
-### Motivation
+[Phoenix LiveView](https://github.com/phoenixframework/phoenix_live_view) is an exciting new way to build interactive, real-time web apps. I want to share a few example web apps I've created using LiveView and explain how these apps work.
 
-Phoenix LiveView is an exciting new way to build interactive, real-time web apps.
+### Motivation
 
 Traditionally, the only way to write web apps that are highly interactive has been by using JavaScript, along with the help of a library or framework such as React, Angular, or Vue. These technologies are very powerful, and developers can use them to create complex web applciations.
 
@@ -32,3 +32,9 @@ At this point, the user has a full page of server-rendered content, regardless o
 3. Client upgrades to a websocket connection to enable real-time updates.
 
 LiveView uses web sockets as a means of bidirectional message passing between browser and server. Once the websocket connection is established, the client may send updates to the server. Any updates to the state of the LiveView will trigger a UI render from the server, triggered by events that travel along the web socket connection. Updates don't only have to come from the browser. It's possible that other processes on the server can send messages to the LiveView process, which could result in a UI update in the browser.
+
+### Example apps
+
+I made a small handful of demo applications to show off LiveView. I have some experience with Elixir and Phoenix, but these apps were my first tango with LiveView. I was impressed about how simple it was to get started.
+
+TODO: links to docs about specific apps

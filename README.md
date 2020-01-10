@@ -1,36 +1,40 @@
-# Phoenix LiveView Examples
+[Phoenix LiveView](https://github.com/phoenixframework/phoenix_live_view) is an exciting new way to build interactive, real-time web apps. I want to share a few example web apps I've created using LiveView and explain how these apps work.
 
-A handful of examples that showcase what's possible using the realtime features of the Phoenix web framework, including Phoenix LiveView.
+### Motivation
 
-Run `mix phx.server` to view the examples listed below.
+Traditionally, the only way to write web apps that are highly interactive has been by using JavaScript, along with the help of a library or framework such as React, Angular, or Vue. These technologies are very powerful, and developers can use them to create complex web applciations.
 
-### Simple Counter
+For some (many?) development teams, using a modern front-end UI framework introduces a lot of complexity. At [Underbelly](https://underbelly.is), JavaScript is kind of our shtick, so the cost may not be as high as for others. Even so, I think most developers would agree that the JavaScript ecosystem can be a little crazy sometimes. It's a language that is evolving rapidly, and at the same time there's "supersets" like TypeScript, which adds types to the language. On top of that, there are tools like Babel which transpile our JavaScript into older JavaScript, or to turn our React components into actual JavaScript. In the end, these tools allow us to build sophisticated web apps, but that comes with a cost in complexity and maintainability for many development teams.
 
-This is a simple UI that allows the user to increase or decrease a number. A progress bar is shown to represent the value of the counter, and the transitions are animated using CSS. [Read about how this works](docs/counter.md).
+Many of the web applications that I have worked on in the past have needed only a small level of interactivity. For example, validating form input fields, or creating multi-step forms to collect user input, etc. In most cases, we ended up accomplishing these sort of requirements by adding a full-fledged front-end library like React to the codebase, and sprinkling it in where needed. In other words:
 
+> There’s a common class of applications where rich experiences are needed, but full single-page applications are otherwise overkill to achieve the bits of required rich interaction.
 
-### Form Validation
+Phoenix LiveView is not here to try and replace JavaScript, but it's an alternative way to create highly interactive web experiences without adding the complexity of a front-end UI library. The part of LiveView that runs in the browser uses JavaScript behind the scenes, but developers only need to write and test code using Elixir.
 
-A form for users to input some information. The form fields are validated in real time. If Javascript is disabled, the app is still able to function, and falls back to validation upon form submission.
+In summary, LiveView offers...
 
-### Paginated Data
+- Interactive, Real-Time apps without needing to write JavaScript
+- A simple programming model
+- Optimized application performance
 
-_Coming Soon_
+### How LiveView Works
 
-### Kanban Board
+To put things simply, LiveView does what React does in terms of updating UI based on state changes, except it happens on the server. This may seem like an odd approach upon first thought, but it works suprisingly well for a lot of use cases. Let's first walk through what happens when a browser makes a request to a LiveView enabled route:
 
-Allows users to move cards around on the page, similar to Asana or Trello. This example demonstrates LiveView's interoperability with Javascript via [hooks](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html#module-js-interop-and-client-controlled-dom).
+<img align="right" src="./docs/presentation/flow.png" width="500" style="text-align:center;" />
 
-### Tennis Scorekeeping
+1. Client makes HTTP request to the server.
+2. Server returns a plain old HTML document to the client.
 
-Offers an interface to administer tennis matches (create matches, give points to players, etc.) Other users can "subscribe" to one or more tennis matches and receive updates to the game in real time.
+At this point, the user has a full page of server-rendered content, regardless of whether the browser has JavaScript enabled/disabled.
 
-### Typing Test
+3. Client upgrades to a websocket connection to enable real-time updates.
 
-Calculate your WPM and see results from yourself and others in real time.
+LiveView uses web sockets as a means of bidirectional message passing between browser and server. Once the websocket connection is established, the client may send updates to the server. Any updates to the state of the LiveView will trigger a UI render from the server, triggered by events that travel along the web socket connection. Updates don't only have to come from the browser. It's possible that other processes on the server can send messages to the LiveView process, which could result in a UI update in the browser.
 
-### Spell Checker
+### Example apps
 
-_Coming Soon_
+I made a small handful of demo applications to show off LiveView. I have some experience with Elixir and Phoenix, but these apps were my first tango with LiveView. I was impressed about how simple it was to get started.
 
-
+TODO: links to docs about specific apps

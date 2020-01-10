@@ -9,12 +9,13 @@
         <%= render "card.html",
           title: "Simple Counter",
           desc: "Probably the most simple example. This is just a UI that allows the user to increase or decrease a number. A progress bar is shown to represent the value of the counter, and the transitions are animated using CSS.",
-          demo_route: Routes.counter_path(DemoWeb.Endpoint, DemoWeb.CounterLive) %>
+          demo_route: Routes.counter_path(DemoWeb.Endpoint, DemoWeb.CounterLive),
+          doc_route: "https://github.com/denvaar/liveview_examples/blob/master/docs/counter.md" %>
 
         <%= render "card.html",
           title: "Typing Test",
           desc: "Calculate your WPM and see results from yourself and others in real time.",
-          demo_route: Routes.redirect_to_typing_test_path(DemoWeb.Endpoint, [as: :typing_test]) %>
+          demo_route: Routes.redirect_to_typing_test_path(DemoWeb.Endpoint, [as: :typing_test]), doc_route: "" %>
 
       </div>
       <div class="column is-one-third">
@@ -22,12 +23,12 @@
         <%= render "card.html",
           title: "Form Validation",
           desc: "A form for users to input some information. The form fields are validated in real time. If Javascript is disabled, the app is still able to function, and falls back to validation upon form submission.",
-          demo_route: Routes.form_validation_path(DemoWeb.Endpoint, DemoWeb.FormValidationLive) %>
+          demo_route: Routes.form_validation_path(DemoWeb.Endpoint, DemoWeb.FormValidationLive), doc_route: "" %>
 
         <%= render "card.html",
           title: "Tennis Scorekeeping",
           desc: "Offers an interface to administer tennis matches (create matches, give points to players, etc.) Other users can \"subscribe\" to one or more tennis matches and receive updates to the game in real time.",
-          demo_route: Routes.watch_tennis_path(DemoWeb.Endpoint, DemoWeb.TennisLive) %>
+          demo_route: Routes.watch_tennis_path(DemoWeb.Endpoint, DemoWeb.TennisLive), doc_route: "" %>
 
       </div>
       <div class="column is-one-third">
@@ -35,12 +36,12 @@
         <%= render "card.html",
           title: "Kanban Task Board",
           desc: "Allows users to move cards around on the page, similar to Asana or Trello. This example demonstrates LiveView's interoperability with Javascript via hooks.",
-          demo_route: Routes.kanban_path(DemoWeb.Endpoint, DemoWeb.KanbanLive) %>
+          demo_route: Routes.kanban_path(DemoWeb.Endpoint, DemoWeb.KanbanLive), doc_route: "" %>
 
         <%= render "card.html",
           title: "Color Sorting Animation",
           desc: "This is actually more of an example of what LiveView is not well suited for, but still it's suprising how well it works.",
-          demo_route: Routes.colors_path(DemoWeb.Endpoint, DemoWeb.ColorsLive) %>
+          demo_route: Routes.colors_path(DemoWeb.Endpoint, DemoWeb.ColorsLive), doc_route: "" %>
 
       </div>
     </div>

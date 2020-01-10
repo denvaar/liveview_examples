@@ -11,7 +11,10 @@ Hooks.KanbanCard = {
     cards.forEach(card => {
       card.addEventListener('dragstart', e => {
         e.dataTransfer.setData('t_id', e.target.getAttribute('phx-value-id'));
-        e.dataTransfer.setData('status', e.target.parentElement.parentElement.getAttribute('phx-value-status'));
+        e.dataTransfer.setData(
+          'status',
+          e.target.parentElement.parentElement.getAttribute('phx-value-status'),
+        );
       });
     });
   },

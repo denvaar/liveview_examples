@@ -1,6 +1,6 @@
 [Phoenix LiveView](https://github.com/phoenixframework/phoenix_live_view) is an exciting new way to build interactive, real-time web apps. I want to share a few example web apps I've created using LiveView and explain how these apps work.
 
-### Motivation
+### Motivation for LiveView
 
 Traditionally, the only way to write web apps that are highly interactive has been by using JavaScript, along with the help of a library or framework such as React, Angular, or Vue. These technologies are very powerful, and developers can use them to create complex web applciations.
 

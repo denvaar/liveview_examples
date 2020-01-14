@@ -37,4 +37,5 @@ LiveView uses web sockets as a means of bidirectional message passing between br
 
 I made a small handful of demo applications to show off LiveView. I have some experience with Elixir and Phoenix, but these apps were my first tango with LiveView. I was impressed about how simple it was to get started.
 
-TODO: links to docs about specific apps
+1. [Simple Counter](./docs/counter.md)
+2. [Form Validations](./docs/form-validation.md)

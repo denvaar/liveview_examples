@@ -15,7 +15,8 @@
         <%= render "card.html",
           title: "Typing Test",
           desc: "Calculate your WPM and see results from yourself and others in real time.",
-          demo_route: Routes.redirect_to_typing_test_path(DemoWeb.Endpoint, [as: :typing_test]), doc_route: "" %>
+          demo_route: Routes.redirect_to_typing_test_path(DemoWeb.Endpoint, [as: :typing_test]),
+          doc_route: "" %>
 
       </div>
       <div class="column is-one-third">
@@ -23,7 +24,7 @@
         <%= render "card.html",
           title: "Form Validation",
           desc: "A form for users to input some information. The form fields are validated in real time. If Javascript is disabled, the app is still able to function, and falls back to validation upon form submission.",
-          demo_route: Routes.form_validation_path(DemoWeb.Endpoint, DemoWeb.FormValidationLive), doc_route: "" %>
+          demo_route: Routes.form_validation_path(DemoWeb.Endpoint, DemoWeb.FormValidationLive), doc_route: "https://github.com/denvaar/liveview_examples/blob/master/docs/form-validation.md" %>
 
         <%= render "card.html",
           title: "Tennis Scorekeeping",

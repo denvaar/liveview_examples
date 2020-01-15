@@ -40,6 +40,9 @@ I made a small handful of demo applications to show off LiveView. I have some ex
 1. [Simple Counter](/docs/counter.md)
 2. [Form Validations](/docs/form-validation.md)
 3. [Kanban Board](/docs/kanban.md)
+4. [Typing Test](/docs/typing-test.md)
+5. [Tennis Scorekeeping](/docs/tennis.md)
+6. [Color Grouping Animation](/docs/colors.md)
 
 ### Start the App
 

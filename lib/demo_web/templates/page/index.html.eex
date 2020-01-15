@@ -43,7 +43,8 @@
         <%= render "card.html",
           title: "Color Sorting Animation",
           desc: "This app creates 1,000 randomly colored and positioned divs, and then groups them together based on their hue.",
-          demo_route: Routes.colors_path(DemoWeb.Endpoint, DemoWeb.ColorsLive), doc_route: "" %>
+          demo_route: Routes.colors_path(DemoWeb.Endpoint, DemoWeb.ColorsLive),
+          doc_route: "https://github.com/denvaar/liveview_examples/blob/master/docs/colors.md" %>
 
       </div>
     </div>

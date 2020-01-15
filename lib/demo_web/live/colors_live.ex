@@ -41,7 +41,7 @@ defmodule DemoWeb.ColorsLive do
     {:noreply, assign(socket, bubbles: bubbles)}
   end
 
-  def create_random_bubbles() do
+  defp create_random_bubbles() do
     1..1_000
     |> Enum.map(fn n ->
       color = gen_random_rgb()
@@ -57,7 +57,7 @@ defmodule DemoWeb.ColorsLive do
     end)
   end
 
-  def scale_bubbles(bubbles) do
+  defp scale_bubbles(bubbles) do
     x_max =
       bubbles
       |> Enum.max_by(fn %{target_x: target_x} -> target_x end)
@@ -75,17 +75,17 @@ defmodule DemoWeb.ColorsLive do
     end)
   end
 
-  def x_factor(%{x: x, target_x: target_x}) when x < target_x do
+  defp x_factor(%{x: x, target_x: target_x}) when x < target_x do
     1
   end
 
-  def x_factor(_), do: -1
+  defp x_factor(_), do: -1
 
-  def update_bubble_x(diff, bubble) when diff <= 20 do
+  defp update_bubble_x(diff, bubble) when diff <= 20 do
     bubble.x
   end
 
-  def update_bubble_x(_diff, bubble) do
+  defp update_bubble_x(_diff, bubble) do
     2..15
     |> Enum.random()
     |> Kernel.*(x_factor(bubble))

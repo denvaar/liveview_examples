@@ -56,7 +56,6 @@ defmodule Demo.TypingTest.Stats do
 
   defp initial_state() do
     %{
-      status: :waiting,
       elapsed_time: 0,
       start_time: 0,
       wpm: 0

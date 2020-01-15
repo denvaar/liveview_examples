@@ -83,7 +83,7 @@ defmodule DemoWeb.TypingTestLive do
      )}
   end
 
-  def handle_info(%{event: "test_complete", payload: result}, socket) do
+  def handle_info(%{event: "test_complete", payload: _result}, socket) do
     {:noreply, assign(socket, history: History.get_recent_tests())}
   end
 

@@ -49,4 +49,6 @@ Hooks.KanbanColumn = {
 };
 ```
 
-So, in summary, often times you won't need to use hooks, but for some cases, they are necessary.
+When a card is dropped onto a column, the [data transfer](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer) API is used to get the task ID as well as the status. `pushEvent` is used to send a message to the LiveView process. Back in `kanban_live.ex` there's a corresponding `handle_event` function that knows how to handle the `"drop"` message.
+
+So, in summary, often times you won't need to use hooks, but for some cases like drag and drop, they are necessary.

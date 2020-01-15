@@ -8,15 +8,15 @@
 
         <%= render "card.html",
           title: "Simple Counter",
-          desc: "Probably the most simple example. This is just a UI that allows the user to increase or decrease a number. A progress bar is shown to represent the value of the counter, and the transitions are animated using CSS.",
+          desc: "This is an app that allows the user to increase or decrease a number. A progress bar is shown to represent the value of the counter, and the transitions are animated using CSS.",
           demo_route: Routes.counter_path(DemoWeb.Endpoint, DemoWeb.CounterLive),
           doc_route: "https://github.com/denvaar/liveview_examples/blob/master/docs/counter.md" %>
 
         <%= render "card.html",
           title: "Typing Test",
-          desc: "Calculate your WPM and see results from yourself and others in real time.",
+          desc: "This is a typing test app that you can use to calculate your WPM. Results are dispayed in real time from other users as well.",
           demo_route: Routes.redirect_to_typing_test_path(DemoWeb.Endpoint, [as: :typing_test]),
-          doc_route: "" %>
+          doc_route: "https://github.com/denvaar/liveview_examples/blob/master/docs/typing-test.md" %>
 
       </div>
       <div class="column is-one-third">
@@ -42,7 +42,7 @@
 
         <%= render "card.html",
           title: "Color Sorting Animation",
-          desc: "This is actually more of an example of what LiveView is not well suited for, but still it's suprising how well it works.",
+          desc: "This app creates 1,000 randomly colored and positioned divs, and then groups them together based on their hue.",
           demo_route: Routes.colors_path(DemoWeb.Endpoint, DemoWeb.ColorsLive), doc_route: "" %>
 
       </div>

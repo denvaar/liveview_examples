@@ -37,7 +37,8 @@
         <%= render "card.html",
           title: "Kanban Task Board",
           desc: "Allows users to move cards around on the page, similar to Asana or Trello. This example demonstrates LiveView's interoperability with Javascript via hooks.",
-          demo_route: Routes.kanban_path(DemoWeb.Endpoint, DemoWeb.KanbanLive), doc_route: "" %>
+          demo_route: Routes.kanban_path(DemoWeb.Endpoint, DemoWeb.KanbanLive),
+          doc_route: "https://github.com/denvaar/liveview_examples/blob/master/docs/kanban.md" %>
 
         <%= render "card.html",
           title: "Color Sorting Animation",

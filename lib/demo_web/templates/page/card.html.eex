@@ -18,7 +18,7 @@
     <p class="card-footer-item">
       <span>
         <%= link to: @doc_route do %>
-          Read Docs
+          Read Info
         <% end %>
       </span>
     </p>

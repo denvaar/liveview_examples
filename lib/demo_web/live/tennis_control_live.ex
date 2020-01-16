@@ -46,14 +46,13 @@ defmodule DemoWeb.TennisControlLive do
             <%= if form_is_valid? do %>
               <button
                 class="button is-info is-inverted is-outlined"
-                phx-click="toggle-modal">
+                phx-click="toggle-creating">
                 Create Match
               </button>
             <% else %>
               <button
                 disabled
-                class="button is-info is-inverted is-outlined"
-                phx-click="toggle-modal">
+                class="button is-info is-inverted is-outlined">
                 Create Match
               </button>
             <% end %>
@@ -108,7 +107,7 @@ defmodule DemoWeb.TennisControlLive do
     """
   end
 
-  def handle_event("toggle-modal", _params, socket) do
+  def handle_event("toggle-creating", _params, socket) do
     {:noreply, assign(socket, creating_match: !socket.assigns.creating_match)}
   end
 

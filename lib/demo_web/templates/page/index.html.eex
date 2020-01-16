@@ -29,7 +29,8 @@
         <%= render "card.html",
           title: "Tennis Scorekeeping",
           desc: "Offers an interface to administer tennis matches (create matches, give points to players, etc.) Other users can \"subscribe\" to one or more tennis matches and receive updates to the game in real time.",
-          demo_route: Routes.watch_tennis_path(DemoWeb.Endpoint, DemoWeb.TennisLive), doc_route: "" %>
+          demo_route: Routes.watch_tennis_path(DemoWeb.Endpoint, DemoWeb.TennisLive),
+          doc_route: "https://github.com/denvaar/liveview_examples/blob/master/docs/tennis.md" %>
 
       </div>
       <div class="column is-one-third">
